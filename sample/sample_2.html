@@ -8,9 +8,34 @@
 
   <body>
     <div id="app">
-      <h1>{{ name }} {{ age }}歳</h1>
+      <h1>
+        <span v-if="(new Date()).getHours() < 12">おはよう</span>
+        <span v-else-if="(new Date()).getHours() < 17">チッス</span>
+        <span v-else-if="(new Date()).getHours() < 22">こんばんは</span>
+        <span v-else>おっす</span>
+        <span>{{ name }}({{ age }}歳)</span>
+      </h1>
       <p>料金：{{ fare }}円</p>
       <p>西暦{{ sYear }}年は、平成{{ hYear }}年</p>
+      <div>
+        v-forで曜日表示
+        <ul>
+          <li v-for="(wday, i) in week">{{ i + 1 }} : {{ wday }}曜日</li>
+        </ul>
+      </div>
+      <div>
+        v-forでobjも回す
+        <ul>
+          <li v-for="(wdayobj, i) in weekObj">
+            <ul>
+              <span>{{ i }}番</span>
+              <li v-for="val, k in wdayobj" v-bind:key="val.yomi">
+                {{ k }} : {{ val }}
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <script src="sample_2.js"></script>

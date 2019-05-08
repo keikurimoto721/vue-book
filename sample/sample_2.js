@@ -3,7 +3,39 @@ var app = new Vue({
   data: {
     name: "田中一郎",
     dateOfBirth: new Date("2000/9/10"),
-    sYear: 2000
+    sYear: 2000,
+    showName: true,
+    week: ["月", "火", "水", "木", "金", "土", "日"],
+    weekObj: [
+      {
+        youbi: "月",
+        yomi: "げつ"
+      },
+      {
+        youbi: "火",
+        yomi: "か"
+      },
+      {
+        youbi: "水",
+        yomi: "すい"
+      },
+      {
+        youbi: "木",
+        yomi: "もく"
+      },
+      {
+        youbi: "金",
+        yomi: "かね"
+      },
+      {
+        youbi: "土",
+        yomi: "ど"
+      },
+      {
+        youbi: "日",
+        yomi: "にち"
+      }
+    ]
   },
   computed: {
     age: function() {
