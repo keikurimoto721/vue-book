@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+    <meta charset="UTF-8" />
+    <title>Vue.jsのテスト</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <label for="inStr">回文チェックします: </label>
+      <input type="text" name="inStr" v-model.trim="inStr" />
+      <p>{{ kaibun() }}</p>
+      <br />
+      <button name="myBtn" @click="changeMsg">
+        クリックしてちょ
+      </button>
+      <h1>{{ msg }}</h1>
+      <p v-bind:style="{ fontWeight: font }">ようこそ{{ msg2 }}!!!!!</p>
+    </div>
+
+    <script src="sample.js"></script>
+  </body>
+</html>
