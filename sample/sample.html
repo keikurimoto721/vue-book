@@ -9,14 +9,28 @@
   <body>
     <div id="app">
       <label for="inStr">回文チェックします: </label>
-      <input type="text" name="inStr" v-model.trim="inStr" />
+      <input
+        type="text"
+        name="inStr"
+        v-model.trim="inStr"
+        placeholder="入力してください"
+      />
       <p>{{ kaibun() }}</p>
       <br />
+
       <button name="myBtn" @click="changeMsg">
         クリックしてちょ
       </button>
-      <h1>{{ msg }}</h1>
-      <p v-bind:style="{ fontWeight: font }">ようこそ{{ msg2 }}!!!!!</p>
+      <h1>{{ msg + " - - - " + font }}</h1>
+      <p>
+        <a v-bind:style="{ fontWeight: font }" v-bind:href="toGoogle">
+          ようこそ{{ msg2 }}!!!!!
+        </a>
+      </p>
+      <br />
+
+      <p>今年は、{{ (new Date()).getFullYear() }}年です。</p>
+      <p>端数切り捨て：{{ Math.floor(num) }}</p>
     </div>
 
     <script src="sample.js"></script>

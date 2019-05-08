@@ -1,10 +1,12 @@
-var app = new Vue({
+new Vue({
   el: "#app",
   data: {
     msg: "初めてのVue.js",
     msg2: "Vue.js",
     font: "normal",
-    inStr: "入力してくれたまえ"
+    inStr: "",
+    num: 29.35,
+    toGoogle: "https://www.google.com/"
   },
   methods: {
     changeMsg: () => {

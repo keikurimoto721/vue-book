@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <meta charset="UTF-8" />
+    <title>Vueでおみくじ</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <button name="myBtn" v-on:click="uranau()">占う</button>
+      <div>
+        <img v-bind="imageAttrs" />
+      </div>
+    </div>
+
+    <script src="./omikuji.js"></script>
+  </body>
+</html>
