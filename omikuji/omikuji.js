@@ -5,8 +5,7 @@ var app = new Vue({
     kujis: ["daikichi.png", "kichi.png", "kyou.png"],
     imageAttrs: {
       src: "./figs/omikuji.png",
-      width: "300",
-      height: "200",
+      width: "100",
       alt: "おみくじ"
     }
   },
