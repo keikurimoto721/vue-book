@@ -54,6 +54,21 @@
           einfoメソッド実行
         </button>
       </div>
+
+      <hr />
+      <div>
+        <h3>行きたい国は？</h3>
+        <select v-model="countries" multiple>
+          <option v-for="c in clist" v-bind:value="c.en">
+            {{ c.ja }}
+          </option>
+        </select>
+        <br />
+        <button @click="countries = []">クリア</button>
+        <ul>
+          <li v-for="c in countries">{{ c }}</li>
+        </ul>
+      </div>
     </div>
 
     <script src="sample_2.js"></script>

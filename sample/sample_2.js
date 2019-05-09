@@ -35,7 +35,14 @@ var app = new Vue({
         youbi: "日",
         yomi: "にち"
       }
-    ]
+    ],
+    clist: [
+      { en: "ENGLAND", ja: "イギリス" },
+      { en: "USA", ja: "アメリカ" },
+      { en: "CHINA", ja: "中国" },
+      { en: "SPAIN", ja: "スペイン" }
+    ],
+    countries: []
   },
   computed: {
     age: function() {
