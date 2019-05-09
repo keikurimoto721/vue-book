@@ -69,5 +69,11 @@ var app = new Vue({
         this.sYear = newV + 1988;
       }
     }
+  },
+  methods: {
+    einfo: function(msg, e) {
+      console.log("msg: " + msg);
+      console.log(e);
+    }
   }
 });

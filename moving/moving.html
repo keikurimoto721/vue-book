@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+    <meta charset="UTF-8" />
+    <title>moving</title>
+    <style>
+      #app {
+        width: 800px;
+        height: 500px;
+        background-color: rgba(0, 255, 255);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app" @click.once="move">
+      <img src="figs/kuma1.png" v-bind:style="myStyle" />
+    </div>
+
+    <script src="moving.js"></script>
+  </body>
+</html>

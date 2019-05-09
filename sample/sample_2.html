@@ -36,6 +36,24 @@
           </li>
         </ul>
       </div>
+      <hr />
+      <div>
+        <button v-on:click="this.console.log('クリック!');">
+          クリックしてください
+        </button>
+        <button
+          @click="this.console.log('節子それクリックや');"
+          @dblclick="this.console.log('ダブルクリック!!');"
+          @keypress="this.console.log('keypressed: ' + this.event.keyCode)"
+          @keyup="this.console.log('keyupped: ' + this.event.keyCode)"
+          @mouseover="this.console.log('mouse overed')"
+        >
+          ダブルクリックしてください
+        </button>
+        <button @click="einfo('hello einfo', $event)">
+          einfoメソッド実行
+        </button>
+      </div>
     </div>
 
     <script src="sample_2.js"></script>
