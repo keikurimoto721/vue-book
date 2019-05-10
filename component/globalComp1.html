@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>コンポーネント</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <my-comp-1></my-comp-1>
+      <hr />
+      <local-comp>ローカル登録</local-comp>
+      <hr />
+      <counter couter-name="1個目" v-bind:number="10"></counter>
+      <hr />
+      <counter couter-name="2個目" v-bind:number="25"></counter>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+    <script src="./globalComp1.js"></script>
+  </body>
+</html>
