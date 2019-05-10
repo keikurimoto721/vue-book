@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>お絵かきアプリ</title>
+    <style>
+      canvas {
+        border: gray solid;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      色:<label><input type="radio" value="black" v-model="color" />黒</label>
+      <label><input type="radio" value="red" v-model="color" />赤</label>
+      <label><input type="radio" value="yellow" v-model="color" />黄</label>
+      <label><input type="radio" value="green" v-model="color" />緑</label>
+
+      <label for="width">線幅</label>
+      <select v-model="width">
+        <option v-for="num in 9">{{ num }}</option>
+      </select>
+      <button @click="clearAll()">全て消去</button>
+      <button @click="undo()">戻る</button>
+      <button @click="redraw()">色変更</button>
+      <br />
+      <canvas
+        ref="myCanvas"
+        width="600"
+        height="400"
+        @mousedown="mousedown"
+        @mousemove="mousemove"
+        @mouseup="mouseup"
+      ></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+    <script src="./oekaki.js"></script>
+  </body>
+</html>
